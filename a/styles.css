@@ -1,0 +1,129 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+body {
+    font-family: "Antic Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: #f4f4f4;;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 0.5px solid #333;}
+header a {
+    color: #333; /* Change this to your desired color */
+    text-decoration: none; /* Optional: removes underline */
+}
+main {
+    padding: 2rem;
+}
+
+
+
+a {
+    color: #fb1eff;
+    text-decoration: none;
+}
+
+p {
+    max-width: 500px;     
+    margin: 0 auto;       
+    text-align: justify;   
+}
+
+
+/* flex */
+
+/* Flex container styling */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Flex item (individual links) styling */
+.flex-item {
+    display: block;
+    padding: 50px;
+    width: 600px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #dab0dc;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hover effect for links */
+.flex-item:hover {
+    background-color: #b084b3;
+}
+
+a.flex-item {
+    color: #ffffff;
+    background-color: #dab0dc;
+    padding: 100px 200px 100px 200px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .flex-container {
+        width: 100%;
+    }
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/* Charts */
+#bar-chart {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Custom styles for Plotly.js graph elements */
+.plotly .main-svg {
+    font-family: "Antic Slab", serif;
+    font-size: 12px; /* Font size */
+    color: #333; /* Font color */
+}
+
+.plotly .legend {
+    background-color: #f4f4f4; /* Legend background */
+    border: 1px solid #ddd; /* Legend border */
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.plotly .xtick text, .plotly .ytick text {
+    fill: #007bff; /* Axis tick labels color */
+}
+
+.plotly .hoverlayer {
+    background-color: #333;
+    color: #fff;
+}

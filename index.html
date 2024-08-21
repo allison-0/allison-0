@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple GitHub Pages site">
+    <title>allison-0.github.io</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" class="h-url">allison-0.github.io</a></h1>
+    </header>
+    <main>
+        <h2>About This Page</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <section id="pages-container" class="flex-container">
+            <!-- Links will be dynamically inserted here -->
+        </section>
+        <br>
+    
+        <script>
+            // Function to fetch and populate the list of pages
+            function loadPages() {
+                fetch('pages.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.getElementById('pages-container');
+        
+                        // Clear the container
+                        container.innerHTML = '';
+        
+                        // Loop through the JSON data and create links
+                        data.forEach(page => {
+                            const anchor = document.createElement('a');
+                            anchor.href = page.url;
+                            anchor.className = 'flex-item';
+                            anchor.textContent = page.title;
+        
+                            container.appendChild(anchor);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error loading pages:', error);
+                    });
+            }
+        
+            // Load the pages when the DOM is fully loaded
+            document.addEventListener('DOMContentLoaded', loadPages);
+        </script>
+          
+    </main>
+    <footer>
+    Made with ❤️
+    </footer>
+</body>
+</html>
